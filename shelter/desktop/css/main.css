@@ -1,0 +1,487 @@
+body,
+p,
+h1,
+h2,
+h3 {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  color: #c4c0c0;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+  gap: 90px;
+  background-image: url(/img/main/start-screen-background.jpg);
+  background: radial-gradient(at top left, #5b483a, #262425);
+}
+header nav {
+  display: flex;
+  flex-direction: row;
+  padding: 30px 40px 0;
+  justify-content: space-between;
+  align-items: center;
+  height: fit-content;
+}
+header nav .logo {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+header nav .logo p:nth-child(1) {
+  font-family: "Georgia";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 110%;
+  letter-spacing: 0.06em;
+  color: #f1cdb3;
+}
+header nav .logo p:nth-child(2) {
+  font-family: "Arial";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 15px;
+  letter-spacing: 0.1em;
+  color: #fff;
+}
+header nav .nav-items ul {
+  display: flex;
+  flex-direction: row;
+  gap: 35px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+header nav .nav-items ul li {
+  font-family: "Arial";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 160%;
+  color: #c4c0c0;
+  letter-spacing: 0.01em;
+  transition-property: all;
+  transition: all ease 0.07s;
+}
+header nav .nav-items ul li.active-link {
+  padding-bottom: 1px;
+  border-bottom: 3px solid #f1cdb3;
+  color: #ffffff;
+}
+header nav .nav-items ul li:active {
+  padding-bottom: 1px;
+  border-bottom: 3px solid #f1cdb3;
+  color: #ffffff;
+}
+header nav .nav-items ul li:hover {
+  cursor: pointer;
+  color: #ffffff;
+}
+header .start-screen {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 42px;
+  padding: 0 40px;
+}
+header .start-screen .start-info {
+  display: flex;
+  flex-direction: column;
+  width: 400px;
+  gap: 42px;
+  align-content: center;
+}
+header .start-screen .start-info h1 {
+  font-family: "Georgia";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 44px;
+  line-height: 130%;
+  color: #ffffff;
+}
+header .start-screen .start-info p {
+  font-family: "Arial";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 160%;
+  color: #cdcdcd;
+}
+header .start-screen .start-info button {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: fit-content;
+  padding: 15px 45px;
+  gap: 10px;
+  background: #f1cdb3;
+  border: none;
+  border-radius: 100px;
+  font-family: "Georgia";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 17px;
+  line-height: 130%;
+  letter-spacing: 0.06em;
+  color: #292929;
+  transition-property: all;
+  transition: all ease 0.2s;
+}
+header .start-screen .start-info button:hover {
+  cursor: pointer;
+  background-color: #fddcc4;
+  transition-delay: 0s, 0.8s;
+  transition-timing-function: ease-out(0.1, 0.8, 0.5, 2), linear;
+}
+
+.about {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 120px;
+  padding: 80px 40px 100px 40px;
+}
+.about .about-info {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  width: 410px;
+}
+.about .about-info h2 {
+  font-family: "Georgia";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 35px;
+  line-height: 130%;
+  display: flex;
+  align-items: center;
+  letter-spacing: 0.06em;
+  color: #545454;
+}
+.about .about-info p {
+  font-family: "Arial";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 160%;
+  color: #4c4c4c;
+}
+
+.friends {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 80px 40px 100px 40px;
+  background-color: #f6f6f6;
+  gap: 60px;
+}
+.friends h2 {
+  font-family: "Georgia";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 35px;
+  line-height: 130%;
+  display: flex;
+  align-items: center;
+  letter-spacing: 0.06em;
+  color: #545454;
+  width: 400px;
+  text-align: center;
+}
+.friends .slider {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 60px;
+}
+.friends .slider .cards-of-friends {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 90px;
+}
+.friends .slider .cards-of-friends .pet-card-preview {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  background-color: #fafafa;
+  border-radius: 9px;
+}
+.friends .slider .cards-of-friends .pet-card-preview h3 {
+  font-family: "Georgia";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 23px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  letter-spacing: 0.06em;
+  color: #545454;
+}
+.friends .slider .cards-of-friends .pet-card-preview button {
+  margin-bottom: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 15px 45px;
+  gap: 10px;
+  border: 2px solid #f1cdb3;
+  border-radius: 100px;
+  background-color: #fafafa;
+  font-family: "Georgia";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 17px;
+  line-height: 130%;
+  letter-spacing: 0.06em;
+  color: #292929;
+  transition-property: all;
+  transition: all ease 0.5s;
+}
+.friends .slider .cards-of-friends .pet-card-preview button:hover {
+  cursor: pointer;
+  background: #fddcc4;
+  border: 2px solid #fddcc4;
+  transition-delay: 0s, 0.2s;
+  transition-timing-function: ease-out(0.1, 0.8, 0.5, 2), linear;
+}
+.friends .slider .cards-of-friends .slider-controls {
+  display: flex;
+  position: absolute;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+}
+.friends .slider .cards-of-friends .slider-controls .next img {
+  transform: rotate(180deg);
+}
+.friends .slider .cards-of-friends .slider-controls .prev,
+.friends .slider .cards-of-friends .slider-controls .next {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  padding: 21px 23px;
+  border: 2px solid #f1cdb3;
+  border-radius: 100px;
+  margin: 0 40px;
+  transition-property: all;
+  transition: all ease 0.2s;
+}
+.friends .slider .cards-of-friends .slider-controls .prev:hover,
+.friends .slider .cards-of-friends .slider-controls .next:hover {
+  cursor: pointer;
+  background-color: #fddcc4;
+  border-color: #fddcc4;
+  transition-delay: 0s, 0.5s;
+  transition-timing-function: ease-out(0.1, 0.8, 0.5, 2), linear;
+}
+.friends .slider button {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 15px 45px;
+  gap: 10px;
+  background: #f1cdb3;
+  border-radius: 100px;
+  border: 2px solid #f1cdb3;
+  font-family: "Georgia";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 17px;
+  line-height: 130%;
+  letter-spacing: 0.06em;
+  color: #292929;
+  transition-property: all;
+  transition: all ease 0.2s;
+}
+.friends .slider button:hover {
+  cursor: pointer;
+  background-color: transparent;
+  border: 2px solid #f1cdb3;
+  transition-delay: 0s, 0.5s;
+  transition-timing-function: ease-out(0.1, 0.8, 0.5, 2), linear;
+}
+
+.help {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 60px;
+  padding: 80px 40px 100px 40px;
+}
+.help h2 {
+  font-family: "Georgia";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 35px;
+  line-height: 130%;
+  display: flex;
+  align-items: center;
+  letter-spacing: 0.06em;
+  color: #545454;
+  width: 310px;
+  text-align: center;
+}
+.help .help-items {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 120px;
+}
+.help .help-items div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+}
+.help .help-items div p {
+  font-family: "Georgia";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 23px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  letter-spacing: 0.06em;
+  color: #545454;
+}
+
+.in_additional {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  padding: 80px 40px 100px 40px;
+  background-color: #f6f6f6;
+}
+.in_additional div {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 20px;
+  width: 315px;
+}
+.in_additional div h2 {
+  font-family: "Georgia";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 35px;
+  line-height: 130%;
+  display: flex;
+  align-items: center;
+  letter-spacing: 0.06em;
+  color: #545454;
+}
+.in_additional div p {
+  font-family: "Georgia";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 110%;
+  display: flex;
+  align-items: center;
+  letter-spacing: 0.06em;
+  color: #545454;
+}
+.in_additional div .card {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 10px 15px;
+  gap: 15px;
+  background: #f1cdb3;
+  border-radius: 9px;
+  width: fit-content;
+  font-family: "Georgia";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 115%;
+  display: flex;
+  align-items: center;
+  letter-spacing: 0.06em;
+}
+.in_additional div #donation-description {
+  font-family: "Arial";
+  font-style: italic;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 18px;
+  color: #b2b2b2;
+}
+
+footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 140px;
+  padding: 40px 40px 0 40px;
+  background-image: url(/img/main/start-screen-background.jpg);
+  background: radial-gradient(at top left, #513d2f, #1a1a1c);
+}
+footer div {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 40px;
+}
+footer div h3 {
+  font-family: "Georgia";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 35px;
+  line-height: 130%;
+  letter-spacing: 0.06em;
+  color: #fff;
+}
+footer div div {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 20px;
+}
+footer div div p {
+  font-family: "Georgia";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 23px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  letter-spacing: 0.06em;
+  color: #545454;
+  color: #f1cdb3;
+  text-align: left;
+}
+
+/*# sourceMappingURL=main.css.map */
