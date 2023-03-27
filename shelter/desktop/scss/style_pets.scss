@@ -1,0 +1,307 @@
+@import "mixins";
+
+body,
+p,
+h1,
+h2,
+h3 {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+    text-decoration: none;
+    color: #545454;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+  gap: 90px;
+
+  nav {
+    display: flex;
+    flex-direction: row;
+    padding: 30px 40px;
+    justify-content: space-between;
+    align-items: center;
+    height: fit-content;
+
+    .logo {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+
+      p:nth-child(1) {
+        font-family: "Georgia";
+        font-style: normal;
+        font-weight: 400;
+        font-size: 32px;
+        line-height: 110%;
+        letter-spacing: 0.06em;
+        color: #545454;
+      }
+
+      p:nth-child(2) {
+        font-family: "Arial";
+        font-style: normal;
+        font-weight: 400;
+        font-size: 13px;
+        line-height: 15px;
+        letter-spacing: 0.1em;
+        color: #292929;
+      }
+    }
+
+    .nav-items ul {
+      display: flex;
+      flex-direction: row;
+      gap: 35px;
+      list-style: none;
+      padding: 0;
+      margin: 0;
+
+      li {
+        font-family: "Arial";
+        font-style: normal;
+        font-weight: 400;
+        font-size: 15px;
+        line-height: 160%;
+        color: #545454;
+        letter-spacing: 0.01em;
+        transition-property: all;
+        transition: all ease 0.07s;
+      }
+
+      li.active-link {
+        padding-bottom: 1px;
+        border-bottom: 3px solid #f1cdb3;
+        color: #292929;
+      }
+
+      li:active {
+        padding-bottom: 1px;
+        border-bottom: 3px solid #f1cdb3;
+        color: #292929;
+      }
+
+      li:hover {
+        cursor: pointer;
+        color: #292929;
+      }
+    }
+  }
+}
+
+.our-friends {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 80px 40px 100px 40px;
+  background-color: #f6f6f6;
+  gap: 45px;
+
+  h2 {
+    @include h2_font;
+  }
+
+  .cards-of-friends {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+
+    .pet-card-preview {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 30px;
+      background-color: #fafafa;
+      border-radius: 9px;
+
+      h3 {
+        @include h3_font;
+      }
+
+      button {
+        margin-bottom: 30px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 15px 45px;
+        gap: 10px;
+        border: 2px solid #f1cdb3;
+        border-radius: 100px;
+        background-color: #fafafa;
+        @include inside_button_font;
+        transition-property: all;
+        transition: all ease 0.5s;
+
+        &:hover {
+          cursor: pointer;
+          background: #fddcc4;
+          border: 2px solid #fddcc4;
+          transition-delay: 0s, 0.2s;
+          transition-timing-function: ease-out(0.1, 0.8, 0.5, 2), linear;
+        }
+      }
+    }
+  }
+
+  .pagination {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+
+    .prev,
+    .next,
+    .more-prev,
+    .more-next,
+    .page-number {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      position: relative;
+      padding: 17px 23px;
+      border: 2px solid #f1cdb3;
+      border-radius: 100px;
+      transition-property: all;
+      transition: all ease 0.2s;
+
+      &:hover {
+        cursor: pointer;
+        background-color: #fddcc4;
+        border-color: #fddcc4;
+        transition-delay: 0s, 0.5s;
+        transition-timing-function: ease-out(0.1, 0.8, 0.5, 2), linear;
+      }
+    }
+
+    .more-prev,
+    .prev {
+      font-family: "Georgia";
+      font-style: normal;
+      font-weight: 400;
+      font-size: 20px;
+      line-height: 115%;
+      display: flex;
+      align-items: center;
+      text-align: center;
+      letter-spacing: 0.06em;
+      color: #cdcdcd;
+
+      border: 2px solid #cdcdcd;
+      border-radius: 100px;
+      transition-property: all;
+      transition: all ease 0.2s;
+    }
+
+    .more-prev a,
+    .prev a {
+      text-decoration: none;
+      color: #cdcdcd;
+    }
+
+    .page-number {
+      background-color: #f1cdb3;
+      transition-property: all;
+      transition: all ease 0.2s;
+    }
+
+    .page-number a {
+      text-decoration: none;
+      font-family: "Georgia";
+      font-style: normal;
+      font-weight: 400;
+      font-size: 20px;
+      line-height: 115%;
+      display: flex;
+      align-items: center;
+      text-align: center;
+      letter-spacing: 0.06em;
+      color: #292929;
+    }
+
+
+    .more-next,
+    .next {
+      font-family: "Georgia";
+      font-style: normal;
+      font-weight: 400;
+      font-size: 20px;
+      line-height: 115%;
+      display: flex;
+      align-items: center;
+      text-align: center;
+      letter-spacing: 0.06em;
+      color: #fddcc4;
+
+      border: 2px solid #fddcc4;
+      border-radius: 100px;
+      transition-property: all;
+      transition: all ease 0.2s;
+    }
+
+    .more-next a,
+    .next a {
+      text-decoration: none;
+      color: #232323;
+    }
+  }
+}
+
+
+footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 140px;
+    padding: 40px 40px 0 40px;
+    background-image: url(/img/main/start-screen-background.jpg);
+    background: radial-gradient(at top left, #513d2f, #1a1a1c);
+  
+    div {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      gap: 40px;
+  
+      h3 {
+        font-family: "Georgia";
+        font-style: normal;
+        font-weight: 400;
+        font-size: 35px;
+        line-height: 130%;
+        letter-spacing: 0.06em;
+        color: #fff;
+      }
+  
+      div {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 20px;
+  
+        p {
+          @include h3_font;
+          color: #f1cdb3;
+          text-align: left;
+        }
+      }
+    }
+  }
+  
