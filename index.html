@@ -13,16 +13,18 @@
 <body>
     <header>
         <nav>
-            <div class="logo">
-                <p>Cozy House</p>
-                <p>Shelter for pets in Boston</p>
-            </div>
+            <a href="#">
+                <div class="logo">
+                    <p>Cozy House</p>
+                    <p>Shelter for pets in Boston</p>
+                </div>
+            </a>
             <div class="nav-items">
                 <ul>
                     <li class="active-link">About the shelter</li>
                     <li><a href="shelter/desktop/html/pets.html">Our pets</a></li>
-                    <li>Help the shelter</li>
-                    <li>Contacts</li>
+                    <li><a href="#help-block">Help the shelter</a></li>
+                    <li><a href="#contact-block">Contacts</a></li>
                 </ul>
             </div>
         </nav>
@@ -31,7 +33,7 @@
                 <h1>Not only people need a house</h1>
                 <p>We offer to give a chance to a little and nice puppy with an extremely wide and open heart. He or she
                     will love you more than anybody else in the world, you will see!</p>
-                <button>Make a friend</button>
+                <a href="#make-friend">Make a friend</a>
             </div>
             <img src="shelter/desktop/img/main/start-screen-puppy.png" alt="start-screen-puppy">
         </section>
@@ -49,8 +51,8 @@
                 attached to the pets and would hardly ever leave them alone.</p>
         </div>
     </section>
-    <section class="friends">
-        <h2>Our friends who
+    <section id="make-friend" class="friends">
+        <h2>Our friends who <br>
             are looking for a house</h2>
         <div class="slider">
             <div class="cards-of-friends">
@@ -74,10 +76,10 @@
                     <div class="next"><a href="#"><img src="shelter/desktop/img/main/Arrow.png" alt="next"></a></div>
                 </div>
             </div>
-            <button>Get to know the rest</button>
+            <a id="the-rest" href="shelter/desktop/html/pets.html">Get to know the rest</a>
         </div>
     </section>
-    <section class="help">
+    <section id="help-block" class="help">
         <h2>How you can help
             our shelter</h2>
         <div class="help-items">
@@ -119,7 +121,9 @@
             <p>Name of the bank / Type of bank account</p>
             <div class="card">
                 <img src="shelter/desktop/img/main/credit-card.svg" alt="credit-card">
-                <p>8380 2880 8028 8791 7435</p>
+                <a href="#">
+                    <p>8380 2880 8028 8791 7435</p>
+                </a>
             </div>
             <p id="donation-description">Legal information and lorem ipsum dolor sit amet, consectetur adipiscing elit.
                 Maecenas a ipsum at libero
@@ -127,33 +131,39 @@
                 fames ac ante ipsum primis in faucibus.</p>
         </div>
     </section>
-    <footer>
+    <footer id="contact-block">
         <div class="for-suggestions">
             <h3>For questions and suggestions</h3>
-            <div>
-                <img src="shelter/desktop/img/main/icon-email.svg" alt="email">
-                <p>email@shelter.com</p>
-            </div>
-            <div>
-                <img src="shelter/desktop/img/main/icon-phone.svg" alt="phone">
-                <p>+13 674 567 75 54</p>
-            </div>
+            <a href="mailto:ask@mail.ru">
+                <div>
+                    <img src="shelter/desktop/img/main/icon-email.svg" alt="email">
+                    <p>email@shelter.com</p>
+                </div>
+            </a>
+            <a href="tel:+136745677554">
+                <div>
+                    <img src="shelter/desktop/img/main/icon-phone.svg" alt="phone">
+                    <p>+13 674 567 75 54</p>
+                </div>
+            </a>
         </div>
         <div class="we-are-waiting">
             <h3>We are waiting for your visit</h3>
-            <div>
-                <img src="shelter/desktop/img/main/icon-marker.png" alt="marker">
-                <p>1 Central Street, Boston (entrance from the store)</p>
-            </div>
-            <div>
-                <img src="shelter/desktop/img/main/icon-marker.png" alt="marker">
-                <p>18 South Park, London </p>
-            </div>
+            <a href="https://goo.gl/maps/vU6mSYJDyuVcK7fLA" target="_blank">
+                <div>
+                    <img src="shelter/desktop/img/main/icon-marker.png" alt="marker">
+                    <p>1 Central Street, Boston (entrance from the store)</p>
+                </div>
+            </a>
+            <a href="https://goo.gl/maps/k25ip5vL7VnQaKz59" target="_blank">
+                <div>
+                    <img src="shelter/desktop/img/main/icon-marker.png" alt="marker">
+                    <p>18 South Park, London </p>
+                </div>
+            </a>
         </div>
         <img src="shelter/desktop/img/main/footer-puppy.png" alt="footer-puppy">
     </footer>
 </body>
 
 </html>
-
-
