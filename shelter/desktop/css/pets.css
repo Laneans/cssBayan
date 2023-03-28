@@ -1,3 +1,7 @@
+html {
+  scroll-behavior: smooth;
+}
+
 body,
 p,
 h1,
@@ -27,7 +31,8 @@ header nav {
   display: flex;
   flex-direction: row;
   padding: 30px 40px;
-  justify-content: space-between;
+  justify-content: center;
+  gap: 549px;
   align-items: center;
   height: fit-content;
 }
@@ -83,7 +88,8 @@ header nav .nav-items ul li:active {
   border-bottom: 3px solid #f1cdb3;
   color: #292929;
 }
-header nav .nav-items ul li:hover {
+header nav .nav-items ul li:hover,
+header nav .nav-items ul a:hover {
   cursor: pointer;
   color: #292929;
 }
@@ -115,6 +121,7 @@ header nav .nav-items ul li:hover {
   align-items: center;
   flex-wrap: wrap;
   gap: 20px;
+  width: 1200px;
 }
 .our-friends .cards-of-friends .pet-card-preview {
   display: flex;
@@ -157,7 +164,10 @@ header nav .nav-items ul li:hover {
   transition-property: all;
   transition: all ease 0.5s;
 }
-.our-friends .cards-of-friends .pet-card-preview button:hover {
+.our-friends .cards-of-friends .pet-card-preview:hover {
+  cursor: pointer;
+}
+.our-friends .cards-of-friends .pet-card-preview:hover button {
   cursor: pointer;
   background: #fddcc4;
   border: 2px solid #fddcc4;
@@ -197,8 +207,9 @@ header nav .nav-items ul li:hover {
   transition-delay: 0s, 0.5s;
   transition-timing-function: ease-out(0.1, 0.8, 0.5, 2), linear;
 }
-.our-friends .pagination .more-prev,
-.our-friends .pagination .prev {
+.our-friends .pagination #disabled-1,
+.our-friends .pagination #disabled-2 {
+  pointer-events: none;
   font-family: "Georgia";
   font-style: normal;
   font-weight: 400;
@@ -208,16 +219,15 @@ header nav .nav-items ul li:hover {
   align-items: center;
   text-align: center;
   letter-spacing: 0.06em;
-  color: #cdcdcd;
-  border: 2px solid #cdcdcd;
+  border: 2px solid #ccc;
   border-radius: 100px;
   transition-property: all;
   transition: all ease 0.2s;
+  color: #ccc;
 }
-.our-friends .pagination .more-prev a,
-.our-friends .pagination .prev a {
-  text-decoration: none;
-  color: #cdcdcd;
+.our-friends .pagination #disabled-1 a,
+.our-friends .pagination #disabled-2 a {
+  color: #ccc;
 }
 .our-friends .pagination .page-number {
   background-color: #f1cdb3;
