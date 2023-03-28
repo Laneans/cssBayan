@@ -1,5 +1,9 @@
 @import "mixins";
 
+html {
+  scroll-behavior: smooth;
+}
+
 body,
 p,
 h1,
@@ -10,8 +14,8 @@ h3 {
 }
 
 a {
-    text-decoration: none;
-    color: #545454;
+  text-decoration: none;
+  color: #545454;
 }
 
 body {
@@ -29,7 +33,8 @@ header {
     display: flex;
     flex-direction: row;
     padding: 30px 40px;
-    justify-content: space-between;
+    justify-content: center;
+    gap: 549px;
     align-items: center;
     height: fit-content;
 
@@ -91,7 +96,8 @@ header {
         color: #292929;
       }
 
-      li:hover {
+      li:hover,
+      a:hover {
         cursor: pointer;
         color: #292929;
       }
@@ -119,6 +125,7 @@ header {
     align-items: center;
     flex-wrap: wrap;
     gap: 20px;
+    width: 1200px;
 
     .pet-card-preview {
       display: flex;
@@ -146,8 +153,11 @@ header {
         @include inside_button_font;
         transition-property: all;
         transition: all ease 0.5s;
+      }
 
-        &:hover {
+      &:hover {
+        cursor: pointer;
+        button {
           cursor: pointer;
           background: #fddcc4;
           border: 2px solid #fddcc4;
@@ -189,8 +199,9 @@ header {
       }
     }
 
-    .more-prev,
-    .prev {
+    #disabled-1,
+    #disabled-2 {
+      pointer-events: none;
       font-family: "Georgia";
       font-style: normal;
       font-weight: 400;
@@ -200,18 +211,15 @@ header {
       align-items: center;
       text-align: center;
       letter-spacing: 0.06em;
-      color: #cdcdcd;
-
-      border: 2px solid #cdcdcd;
+      border: 2px solid #ccc;
       border-radius: 100px;
       transition-property: all;
       transition: all ease 0.2s;
-    }
+      color: #ccc;
 
-    .more-prev a,
-    .prev a {
-      text-decoration: none;
-      color: #cdcdcd;
+      a {
+        color: #ccc;
+      }
     }
 
     .page-number {
@@ -233,7 +241,6 @@ header {
       letter-spacing: 0.06em;
       color: #292929;
     }
-
 
     .more-next,
     .next {
@@ -262,46 +269,44 @@ header {
   }
 }
 
-
 footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 140px;
+  padding: 40px 40px 0 40px;
+  background-image: url(/img/main/start-screen-background.jpg);
+  background: radial-gradient(at top left, #513d2f, #1a1a1c);
+
+  div {
     display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: flex-start;
-    gap: 140px;
-    padding: 40px 40px 0 40px;
-    background-image: url(/img/main/start-screen-background.jpg);
-    background: radial-gradient(at top left, #513d2f, #1a1a1c);
-  
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 40px;
+
+    h3 {
+      font-family: "Georgia";
+      font-style: normal;
+      font-weight: 400;
+      font-size: 35px;
+      line-height: 130%;
+      letter-spacing: 0.06em;
+      color: #fff;
+    }
+
     div {
       display: flex;
-      flex-direction: column;
+      flex-direction: row;
       justify-content: flex-start;
-      gap: 40px;
-  
-      h3 {
-        font-family: "Georgia";
-        font-style: normal;
-        font-weight: 400;
-        font-size: 35px;
-        line-height: 130%;
-        letter-spacing: 0.06em;
-        color: #fff;
-      }
-  
-      div {
-        display: flex;
-        flex-direction: row;
-        justify-content: flex-start;
-        align-items: center;
-        gap: 20px;
-  
-        p {
-          @include h3_font;
-          color: #f1cdb3;
-          text-align: left;
-        }
+      align-items: center;
+      gap: 20px;
+
+      p {
+        @include h3_font;
+        color: #f1cdb3;
+        text-align: left;
       }
     }
   }
-  
+}
