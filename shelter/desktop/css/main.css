@@ -360,6 +360,7 @@ header .start-screen .start-info a:hover {
   align-items: center;
   flex-wrap: wrap;
   gap: 120px;
+  width: 1030px;
 }
 .help .help-items div {
   display: flex;
